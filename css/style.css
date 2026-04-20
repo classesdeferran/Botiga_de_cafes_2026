@@ -143,11 +143,23 @@ section > div {
 
 
 .section_opiniones {
-
   h2 {
     text-align: center;
     font-size: 3.5rem;
   }
 }
 
+.section_opiniones > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  cite {
+    color: red;
+    font-style: italic;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
 
