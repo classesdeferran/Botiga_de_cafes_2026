@@ -102,13 +102,16 @@ section > div {
   gap: 2rem;
 
   img {
-    width: 100%;
+    width: 50%;
+  }
+
+  video {
+    width: 50%;
   }
 }
 
 .textos_fotos {
-  padding-left: 2rem;
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,13 +128,26 @@ section > div {
 
 .texto_derecha {
   text-align: right;
+  padding-left: 2rem;
 }
 
 .texto_izquierda {
   text-align: left;
   color: var(--color_texto_primario);
+  padding-right: 2rem;
 }
 
 .fondo_color {
   background-color: var(--color_fondo_primario);
 }
+
+
+.section_opiniones {
+
+  h2 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+}
+
+
