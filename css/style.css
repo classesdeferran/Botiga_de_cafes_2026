@@ -65,30 +65,41 @@ nav {
 
   ul {
     margin: 0 auto;
-    width: var(--breakpoint_principal);
+    max-width: var(--breakpoint_principal);
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 0;
 
+    @media (max-width: 450px) {
+      justify-content: space-around;
+    }
+
     li {
       list-style: none;
       padding: 0.5rem 1rem;
-      border-top: 5px solid transparent;
-      border-bottom: 5px solid transparent;
       color: var(--color_texto_primario);
 
-      &:hover {
-        border-top: 5px solid var(--color_texto_primario);
-        border-bottom: 5px solid var(--color_texto_primario);
-        border-top: 5px solid yellow;
-        border-bottom: 5px solid yellow;
-        color: yellow;
-      }
 
       a {
+        border-top: 5px solid transparent;
         color: inherit;
         text-decoration: none;
-        font-size: 1.5rem;
+
+        
+      &:hover {
+        /* border-top: 5px solid var(--color_texto_primario);
+        border-bottom: 5px solid var(--color_texto_primario);
+        border-top: 5px solid yellow;
+        border-bottom: 5px solid yellow; */
+        /* border-top: 5px solid yellow;*/
+        color: yellow; 
+
+
+      }
+
+        @media (max-width: 450px) {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -96,7 +107,7 @@ nav {
 
 section > div {
   margin: 0 auto;
-  width: var(--breakpoint_principal);
+  max-width: var(--breakpoint_principal);
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -115,10 +126,15 @@ section > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  padding: 5%;
+
   h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+
+    @media (max-width: 850px) {
+      font-size: 2.5rem;
+    }
   }
 
   p {
@@ -141,21 +157,29 @@ section > div {
   background-color: var(--color_fondo_primario);
 }
 
-
 .section_opiniones {
   h2 {
     text-align: center;
     font-size: 3.5rem;
+    margin-bottom: 1rem;
   }
+
+  padding: 2rem 0;
 }
 
 .section_opiniones > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+  }
+
   cite {
     color: red;
     font-style: italic;
+    font-size: 1.4rem;
   }
 
   p {
@@ -163,3 +187,51 @@ section > div {
   }
 }
 
+/* Footer */
+footer > div {
+  width: var(--breakpoint_principal);
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+
+  color: var(--color_texto_primario);
+
+  h2 {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    /* font-size: 1.2rem; */
+  }
+
+  a:hover {
+    color: yellow;
+    text-decoration: underline;
+  }
+}
+
+.footer_iconos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 0.5rem;
+
+  li {
+    display: inline;
+  }
+
+  img {
+    width: 70%;
+  }
+}
